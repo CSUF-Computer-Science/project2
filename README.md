@@ -4,6 +4,6 @@ Project 2
 
 Group members:
 
-Ada Lovelace adalovelace@csu.fullerton.edu
+Andrew Herber aherber44@csu.fullerton.edu
 
-Charles Babbage charlesbab@csu.fullerton.edu
+Jake Lawrence jakelawrence@csu.fullerton.edu
