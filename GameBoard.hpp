@@ -17,6 +17,7 @@ public:
    
    enum Chutes { SIXTEEN = 16, FORTY_SEVEN = 47, FORTY_NINE = 49, FIFTY_SIX = 56, SIXTY_TWO = 62, SIXTY_FOUR = 64, EIGHTY_SEVEN = 87, NINETY_THREE = 93, NINETY_FIVE = 95, NINETY_EIGHT = 98 };
    
+   insert();
    // Build the gameboard
    // TO DO: implement this function
    void buildBoard();
