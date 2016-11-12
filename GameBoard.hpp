@@ -20,10 +20,15 @@ public:
    // Build the gameboard
    // TO DO: implement this function
    void buildBoard();
-   
+   ExtendableVector <int> gameSpaces;
    GameBoard() {
       // TODO: implement this function properly
-      throw std::logic_error("not implemented yet");
+	   for (int i = 0; i < BOARD_SIZE; i++)
+	   {
+		   gameSpaces.insert(i, 0);
+	   }
+	   buildBoard();
+    // throw std::logic_error("not implemented yet");
    }
    
    // If player lands on chutes or ladders, returns the new position.
@@ -35,10 +40,56 @@ public:
          throw range_error("index out of bounds");
       }
       // TODO: implement this function properly
-      throw std::logic_error("not implemented yet");
+	  else
+	  {
+		  //Ladders
+		  if (position == 1)
+			  return 38;
+		  else if (position == 4)
+			  return 14;
+		  else if (position == 9)
+			  return 31;
+		  else if (position == 21)
+			  return 42;
+		  else if (position == 28)
+			  return 84;
+		  else if (position == 36)
+			  return 44;
+		  else if (position == 51)
+			  return 67;
+		  else if (position == 71)
+			  return 91;
+		  else if (position == 80)
+			  return 100;
+		  //Chutes
+		  else if (position == 16)
+			  return 6;
+		  else if (position == 47)
+			  return 26;
+		  else if (position == 49)
+			  return 11;
+		  else if (position == 56)
+			  return 53;
+		  else if (position == 62)
+			  return 19;
+		  else if (position == 64)
+			  return 60;
+		  else if (position == 87)
+			  return 24;
+		  else if (position == 93)
+			  return 73;
+		  else if (position == 95)
+			  return 75;
+		  else if (position == 98)
+			  return 78;
+		  else
+			  return position;
+	  }
+      //throw std::logic_error("not implemented yet");
    }
-   
 private:
    // TO DO: add storage for squares including square of chutes and ladders
    // Requirement: use ExtendableVector to store the square
+	
 };
+
