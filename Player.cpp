@@ -7,6 +7,7 @@
 // TO DO: implement Player's assignment operator
 Player& Player::operator=(const Player& p) {
    // TODO: implement this function properly
+
    throw std::logic_error("not implemented yet");
 }
 

@@ -13,5 +13,6 @@
 // TO DO: implement this method
 void GameBoard::buildBoard() {
    // TODO: implement this function properly
+	
    throw std::logic_error("not implemented yet");
 }

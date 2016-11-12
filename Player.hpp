@@ -22,7 +22,8 @@ public:
    // TO DO: implement this constructor
    Player(string name) {
       // TODO: implement this function properly
-      throw std::logic_error("not implemented yet");
+	   setName(name); setPostion(0); Die die();
+      //throw std::logic_error("not implemented yet");
    }
    
    // copy constructor
@@ -30,7 +31,9 @@ public:
    // TO DO: implement Player's copy constructor
    Player(const Player &p) {
       // TODO: implement this function properly
-      throw std::logic_error("not implemented yet");
+	   ptr = new Player;
+	   *ptr = *p.ptr;
+      //throw std::logic_error("not implemented yet");
    }
    
    // assignment constructor
@@ -53,9 +56,24 @@ public:
    // If not, player moves to the new square = player's postion + die's face value
    // TO DO: implement this function to move player to the new postion
    //        after player rolls die. Position must be inside the board
-   int rollDieAndMove();
+   int rollDieAndMove()
+   {
+	   int currentPos = getPostion();
+	   Die dieRoll = getDie();
+	   int newPos = (currentPos + dieRoll.getFaceValue);
+	   if (getPostion() > 100 || newPos>100 )
+	   {
+		   return getPostion();
+	   }
+	   else
+	   {
+		   setPostion(currentPos+ dieRoll.getFaceValue);
+		   return getPostion();
+	   }
+   }
 private:
    string playerName;
    int position;
    Die die;
+   Player *ptr;
 };
